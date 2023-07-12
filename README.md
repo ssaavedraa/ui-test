@@ -1,3 +1,8 @@
+IMPORTANT NOTICE!
+==================================================
+
+### Please read the ABOUT.md file first for instructions
+
 Zemoga Front End Development - Candidate Test v2.1
 ==================================================
 
