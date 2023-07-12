@@ -108,7 +108,7 @@
       </aside>
       <main role="main">
         <!-- Start: Implementation -->
-        <iframe src="https://zemoga.santiagosaavedra.com.co/" frameborder="0" class="micro-frontend" id="micro-frontend" width='50px' height='1062px' allowfullscreen title='voting cards'></iframe>
+        <iframe src="http://localhost:3000/" frameborder="0" class="micro-frontend" id="micro-frontend" title='voting cards'></iframe>
         <!-- End: Implementation -->
       </main>
       <aside class="banner banner-bottom" role="doc-tip" aria-label="Submit a name">
@@ -163,5 +163,14 @@
         </div>
       </footer>
     </div>
+    <script>
+      window.addEventListener('message', function (event) {
+        if (event.data.type === 'iframeHeight') {
+          const iframeHeight = event.data.height;
+          const iframe = document.getElementById('micro-frontend');
+          iframe.style.height = `${iframeHeight}px`;
+        }
+      });
+    </script>
   </body>
 </html>
